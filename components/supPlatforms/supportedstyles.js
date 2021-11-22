@@ -1,11 +1,13 @@
 export const styles = {
+  h1: { textAlign: "center" },
   platform: {
-    width: "13rem",
+    width: "12rem",
     height: "7rem",
     border: "5px solid #f9f9fa",
     borderRadius: "20px",
     backgroundColor: "#ffffff",
-    marginRight: "2rem",
+
+    boxShadow: "0px 0px 10px -1px rgba(0,0,0,0.75)",
   },
   platformContent: {
     display: "flex",
@@ -15,10 +17,10 @@ export const styles = {
     padding: "0",
   },
   supPlatforms: {
-    backgroundColor: "#F7FAFC",
     padding: "1rem",
     display: "flex",
-    justifyContent: "center",
+    justifyContent: "space-around",
+    alignItems: "center",
   },
   switch: {
     width: "100%",

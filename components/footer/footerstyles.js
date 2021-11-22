@@ -2,20 +2,24 @@ export const styles = {
   footer: {
     backgroundColor: "#374051",
     color: "#FFFFFF",
-    padding: "0 80px",
     paddingTop: "20px",
   },
   top: {
     display: "flex",
     alignItems: "top",
     justifyContent: "start",
+    flex: "wrap",
+    padding: "0 80px",
   },
-  option: { margin: "0 30px" },
+  option: { marginRight: "50px" },
   bottom: {
     display: "flex",
     alignItems: "center",
     justifyContent: "space-between",
+    flex: "wrap",
     color: "#FFFFFF",
+    borderTop: "1px solid white",
+    padding: "0 80px",
   },
   icon: {
     color: "#FFFFFF",

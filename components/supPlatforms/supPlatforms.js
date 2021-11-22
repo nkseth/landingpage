@@ -112,6 +112,7 @@ const supPlatforms = () => {
   ];
   return (
     <>
+      <h1 style={styles.h1}>Suppoerted Platforms</h1>
       {platformData.map((item, index) => {
         return (
           <div className="supPlatforms-container" style={styles.supPlatforms}>
@@ -145,14 +146,14 @@ const supPlatforms = () => {
                       style={styles.platformName}
                     >
                       <p>
-                        on <br /> {item.name}
+                        on <br />
+                        <b>{item.name}</b>
                       </p>
                     </div>
                   </div>
                 </div>
               );
             })}
-            ;
           </div>
         );
       })}
