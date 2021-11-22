@@ -18,7 +18,7 @@ const movingTest = () => {
               animate={
                 index % 2 !== 0 ? { x: [1700, -850] } : { x: [-850, 1700] }
               }
-              transition={{ duration: 7 }}
+              transition={{ duration: 5 }}
               style={styles.h1}
             >
               {item}
