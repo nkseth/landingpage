@@ -13,12 +13,12 @@ const movingTest = () => {
     <div className="texts-container">
       {textData.map((item, index) => {
         return (
-          <div className="text1-container">
+          <div className="text1-container" key={index}>
             <motion.h1
               animate={
-                index % 2 !== 0 ? { x: [1700, -500] } : { x: [-500, 1700] }
+                index % 2 !== 0 ? { x: [1700, -850] } : { x: [-850, 1700] }
               }
-              transition={{ duration: 7 }}
+              transition={{ duration: 5 }}
               style={styles.h1}
             >
               {item}
