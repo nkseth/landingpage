@@ -6,7 +6,7 @@ import Footer from "../components/footer/footer";
 import SupPlatforms from "../components/supPlatforms/supPlatforms";
 import Timeline from "../components/timeline/timeline";
 
-const index = () => {
+const Index = () => {
   const [platformData, setPLatformData] = useState([
     {
       icon: FaTelegramPlane,
@@ -145,4 +145,4 @@ const index = () => {
   );
 };
 
-export default index;
+export default Index;
