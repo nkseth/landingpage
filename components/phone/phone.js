@@ -1,22 +1,27 @@
+import { motion } from "framer-motion";
 import { styles } from "./phonestyles";
+import ReactPlayer from "react-player";
 
 const phone = () => {
   return (
-    <div className="phone-component" style={styles.phone}>
+    <motion.div
+      animate={{ y: 0 }}
+      initial={{ y: -1500 }}
+      transition={{ delay: 4, duration: 1 }}
+      className="phone-component"
+      style={styles.phone}
+    >
       <div className="phone-bg" style={styles.phoneBg}>
         <div className="phone-holder" style={styles.holder}>
-          {" "}
-          <iframe
-            width="300"
-            height="500"
-            src="./video.mp4?autoplay=1"
-            title="YouTube video player"
-            frameborder="0"
-            allow="autoplay"
-          ></iframe>
+          <ReactPlayer
+            height="510px"
+            url="./video.mp4"
+            playing={true}
+            autoplay={true}
+          />
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 

@@ -4,7 +4,7 @@ import Navbar from "../components/navbar/navbar";
 import Animatedtext from "../components/movingText/movingText";
 import Footer from "../components/footer/footer";
 import SupPlatforms from "../components/supPlatforms/supPlatforms";
-import Phone from "../components/phone/phone";
+import Timeline from "../components/timeline/timeline";
 
 const index = () => {
   const [state, setState] = useState(false);
@@ -51,7 +51,7 @@ const index = () => {
     <div>
       <Navbar />
       <Animatedtext />
-      <Phone />
+
       <SupPlatforms
         platformData={platformData}
         changeSwitch={changeSwitch}

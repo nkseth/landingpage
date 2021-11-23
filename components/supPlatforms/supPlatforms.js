@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Switch from "@mui/material/Switch";
 import { styles } from "./supportedstyles";
+import { motion } from "framer-motion";
 
 const label = { inputProps: { "aria-label": "Switch demo" } };
 
@@ -10,7 +11,10 @@ const supPlatforms = ({ platformData, changeSwitch, state, platformRows }) => {
       <h1 style={styles.h1}>Supported Platforms</h1>
       {platformRows.map((item, index) => {
         return (
-          <div className="supPlatforms-container" style={styles.supPlatforms}>
+          <motion.div
+            className="supPlatforms-container"
+            style={styles.supPlatforms}
+          >
             {platformData.map((item, index) => {
               return (
                 <div className="platform-container" style={styles.platform}>
@@ -50,7 +54,7 @@ const supPlatforms = ({ platformData, changeSwitch, state, platformRows }) => {
                 </div>
               );
             })}
-          </div>
+          </motion.div>
         );
       })}
     </div>

@@ -1,10 +1,9 @@
 export const styles = {
   phone: { display: "flex", justifyContent: "center" },
   phoneBg: {
-    width: "30rem",
-    height: "37rem",
     backgroundColor: "#70A0Fa",
     borderRadius: "4rem",
+    padding: "2rem 5rem",
     display: "flex",
     justifyContent: "center",
     alignItems: "center",

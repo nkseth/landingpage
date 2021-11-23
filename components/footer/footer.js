@@ -41,7 +41,11 @@ const footer = () => {
             <div key={index} className="optin-block" style={styles.option}>
               <h3>{item?.heading}</h3>
               {item.options.map((option, index) => {
-                return <p href="">{option.listitem} </p>;
+                return (
+                  <p href="" key={index}>
+                    {option.listitem}
+                  </p>
+                );
               })}
             </div>
           );

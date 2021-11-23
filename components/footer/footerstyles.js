@@ -3,6 +3,10 @@ export const styles = {
     backgroundColor: "#374051",
     color: "#FFFFFF",
     paddingTop: "20px",
+    minHeight: "40vh",
+    display: "flex",
+    justifyContent: "space-between",
+    flexDirection: "column",
   },
   top: {
     display: "flex",
@@ -11,7 +15,7 @@ export const styles = {
     flex: "wrap",
     padding: "0 80px",
   },
-  option: { marginRight: "50px" },
+  option: { marginRight: "100px" },
   bottom: {
     display: "flex",
     alignItems: "center",
