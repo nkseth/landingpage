@@ -7,45 +7,129 @@ import SupPlatforms from "../components/supPlatforms/supPlatforms";
 import Timeline from "../components/timeline/timeline";
 
 const index = () => {
-  const [state, setState] = useState(false);
-
-  const changeSwitch = () => {
-    setState((state = !state));
-  };
-  const platformRows = ["roww1", "row2", "row3"];
-
-  const platformData = [
+  const [platformData, setPLatformData] = useState([
     {
       icon: FaTelegramPlane,
       name: "Telegram",
       color: "#2f89ce",
+      row: 1,
     },
     {
       icon: FaTwitch,
       name: "Twitch",
       color: "#9147ff",
+      row: 1,
     },
     {
       icon: FaDiscord,
       name: "Discord",
       color: "#8a9cff",
+      row: 1,
     },
     {
       icon: FaTelegramPlane,
       name: "API <Code/>",
       color: "#2f89ce",
+      row: 1,
     },
     {
       icon: FaTelegramPlane,
       name: "Zapier",
       color: "#FF4A00",
+      row: 1,
     },
     {
       icon: FaTelegramPlane,
       name: "Minicraft",
       color: "#43816a",
+      row: 1,
     },
-  ];
+    {
+      icon: FaTelegramPlane,
+      name: "Telegram",
+      color: "#2f89ce",
+      row: 2,
+    },
+    {
+      icon: FaTwitch,
+      name: "Twitch",
+      color: "#9147ff",
+      row: 2,
+    },
+    {
+      icon: FaDiscord,
+      name: "Discord",
+      color: "#8a9cff",
+      row: 2,
+    },
+    {
+      icon: FaTelegramPlane,
+      name: "API <Code/>",
+      color: "#2f89ce",
+      row: 2,
+    },
+    {
+      icon: FaTelegramPlane,
+      name: "Zapier",
+      color: "#FF4A00",
+      row: 2,
+    },
+    {
+      icon: FaTelegramPlane,
+      name: "Minicraft",
+      color: "#43816a",
+      row: 2,
+    },
+    {
+      icon: FaTelegramPlane,
+      name: "Telegram",
+      color: "#2f89ce",
+      row: 3,
+    },
+    {
+      icon: FaTwitch,
+      name: "Twitch",
+      color: "#9147ff",
+      row: 3,
+    },
+    {
+      icon: FaDiscord,
+      name: "Discord",
+      color: "#8a9cff",
+      row: 3,
+    },
+    {
+      icon: FaTelegramPlane,
+      name: "API <Code/>",
+      color: "#2f89ce",
+      row: 3,
+    },
+    {
+      icon: FaTelegramPlane,
+      name: "Zapier",
+      color: "#FF4A00",
+      row: 3,
+    },
+    {
+      icon: FaTelegramPlane,
+      name: "Minicraft",
+      color: "#43816a",
+      row: 3,
+    },
+  ]);
+
+  const handleChangeChecked = async (someItem, isItemChecked) => {
+    const newData = await platformData.map((item, index) => {
+      if (item === someItem) {
+        return {
+          ...item,
+          isChecked: !isItemChecked,
+        };
+      }
+      return item;
+    });
+    await setPLatformData(newData);
+  };
 
   return (
     <div>
@@ -54,10 +138,7 @@ const index = () => {
 
       <SupPlatforms
         platformData={platformData}
-        changeSwitch={changeSwitch}
-        state={state}
-        setState={setState}
-        platformRows={platformRows}
+        changeChecked={handleChangeChecked}
       />
       <Footer />
     </div>
