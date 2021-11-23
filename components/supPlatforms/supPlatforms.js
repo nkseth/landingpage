@@ -1,126 +1,21 @@
-import * as React from "react";
+import React, { useState } from "react";
 import Switch from "@mui/material/Switch";
-import { FaTelegramPlane, FaTwitch, FaDiscord } from "react-icons/fa";
 import { styles } from "./supportedstyles";
 
 const label = { inputProps: { "aria-label": "Switch demo" } };
 
-const supPlatforms = () => {
-  const platformData = [
-    {
-      row1: [
-        {
-          icon: FaTelegramPlane,
-          name: "Telegram",
-          color: "#2f89ce",
-        },
-        {
-          icon: FaTwitch,
-          name: "Twitch",
-          color: "#9147ff",
-        },
-        {
-          icon: FaDiscord,
-          name: "Discord",
-          color: "#8a9cff",
-        },
-        {
-          icon: FaTelegramPlane,
-          name: "API <Code/>",
-          color: "#2f89ce",
-        },
-        {
-          icon: FaTelegramPlane,
-          name: "Zapier",
-          color: "#FF4A00",
-        },
-        {
-          icon: FaTelegramPlane,
-          name: "Minicraft",
-          color: "#43816a",
-        },
-      ],
-    },
-    {
-      row1: [
-        {
-          icon: FaTelegramPlane,
-          name: "Telegram",
-          color: "#2f89ce",
-        },
-        {
-          icon: FaTwitch,
-          name: "Twitch",
-          color: "#9147ff",
-        },
-        {
-          icon: FaDiscord,
-          name: "Discord",
-          color: "#8a9cff",
-        },
-        {
-          icon: FaTelegramPlane,
-          name: "API <Code/>",
-          color: "#2f89ce",
-        },
-        {
-          icon: FaTelegramPlane,
-          name: "Zapier",
-          color: "#FF4A00",
-        },
-        {
-          icon: FaTelegramPlane,
-          name: "Minicraft",
-          color: "#43816a",
-        },
-      ],
-    },
-    {
-      row1: [
-        {
-          icon: FaTelegramPlane,
-          name: "Telegram",
-          color: "#2f89ce",
-        },
-        {
-          icon: FaTwitch,
-          name: "Twitch",
-          color: "#9147ff",
-        },
-        {
-          icon: FaDiscord,
-          name: "Discord",
-          color: "#8a9cff",
-        },
-        {
-          icon: FaTelegramPlane,
-          name: "API <Code/>",
-          color: "#2f89ce",
-        },
-        {
-          icon: FaTelegramPlane,
-          name: "Zapier",
-          color: "#FF4A00",
-        },
-        {
-          icon: FaTelegramPlane,
-          name: "Minicraft",
-          color: "#43816a",
-        },
-      ],
-    },
-  ];
+const supPlatforms = ({ platformData, changeSwitch, state, platformRows }) => {
   return (
-    <>
-      <h1 style={styles.h1}>Suppoerted Platforms</h1>
-      {platformData.map((item, index) => {
+    <div className="supported-platforms" style={styles.supportedPlatforms}>
+      <h1 style={styles.h1}>Supported Platforms</h1>
+      {platformRows.map((item, index) => {
         return (
           <div className="supPlatforms-container" style={styles.supPlatforms}>
-            {item.row1.map((item, index) => {
+            {platformData.map((item, index) => {
               return (
                 <div className="platform-container" style={styles.platform}>
                   <div className="switch-container" style={styles.switch}>
-                    <Switch {...label} defaultChecked size="small" />
+                    <Switch {...label} size="small" onClick={changeSwitch} />
                   </div>
                   <div
                     className="platform-content-container"
@@ -146,7 +41,8 @@ const supPlatforms = () => {
                       style={styles.platformName}
                     >
                       <p>
-                        on <br />
+                        <span style={styles.onOff}>{state ? "on" : "off"}</span>{" "}
+                        <br />
                         <b>{item.name}</b>
                       </p>
                     </div>
@@ -157,7 +53,7 @@ const supPlatforms = () => {
           </div>
         );
       })}
-    </>
+    </div>
   );
 };
 

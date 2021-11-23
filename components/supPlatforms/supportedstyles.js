@@ -1,13 +1,13 @@
 export const styles = {
-  h1: { textAlign: "center" },
+  supportedPlatforms: { margin: "35px 0" },
+  h1: { textAlign: "center", color: "#70A0FA" },
   platform: {
-    width: "12rem",
+    width: "11rem",
     height: "7rem",
-    border: "5px solid #f9f9fa",
+    border: "2px solid #e4e6e7",
     borderRadius: "20px",
-    backgroundColor: "#ffffff",
-
-    boxShadow: "0px 0px 10px -1px rgba(0,0,0,0.75)",
+    background: "linearGradient(145deg, #dae0e3, #ffffff)",
+    boxShadow: " 20px 20px 21px #e3eaed,    -20px -20px 21px #ffffff",
   },
   platformContent: {
     display: "flex",
@@ -17,16 +17,16 @@ export const styles = {
     padding: "0",
   },
   supPlatforms: {
-    padding: "1rem",
     display: "flex",
     justifyContent: "space-around",
+    flex: "wrap",
     alignItems: "center",
+    margin: " 23px 0",
   },
   switch: {
     width: "100%",
     display: "flex",
     justifyContent: "end",
-
     padding: 0,
   },
   icon: { color: "white", fontSize: "2rem" },
@@ -42,4 +42,5 @@ export const styles = {
     padding: "0",
   },
   platformName: { marginLeft: "5px", fontSize: "14px" },
+  onOff: { color: "#808080", fontWeight: "bold" },
 };
