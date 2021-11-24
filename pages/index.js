@@ -4,7 +4,7 @@ import Navbar from "../components/navbar/navbar";
 import Animatedtext from "../components/movingText/movingText";
 import Footer from "../components/footer/footer";
 import SupPlatforms from "../components/supPlatforms/supPlatforms";
-import Timeline from "../components/timeline/timeline";
+import TimelineObject from "../components/timeline/timelineObject";
 
 const Index = () => {
   const [platformData, setPLatformData] = useState([
@@ -132,7 +132,7 @@ const Index = () => {
   };
 
   return (
-    <div>
+    <div style={{ backgroundColor: "#f1f8fc" }}>
       <Navbar />
       <Animatedtext />
 
@@ -140,6 +140,7 @@ const Index = () => {
         platformData={platformData}
         changeChecked={handleChangeChecked}
       />
+
       <Footer />
     </div>
   );

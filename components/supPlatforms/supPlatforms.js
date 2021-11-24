@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import Switch from "@mui/material/Switch";
 import { styles } from "./supportedstyles";
 import { motion } from "framer-motion";
+import { Switch, ChakraProvider } from "@chakra-ui/react";
 
 const label = { inputProps: { "aria-label": "Switch demo" } };
 
@@ -23,16 +23,19 @@ const supPlatforms = ({ platformData, changeChecked }) => {
                 key={index}
               >
                 <div className="switch-container" style={styles.switch}>
-                  <Switch
-                    {...label}
-                    size="small"
-                    onClick={changeChecked.bind(
-                      null,
-                      item,
-                      item?.isChecked || false
-                    )}
-                    checked={item?.isChecked || false}
-                  />
+                  <ChakraProvider>
+                    <Switch
+                      size="sm"
+                      colorScheme="green"
+                      isChecked={item?.isChecked || true}
+                      onFocus={changeChecked.bind(
+                        null,
+                        item,
+                        item?.isChecked || false
+                      )}
+                      defaultIsChecked
+                    />
+                  </ChakraProvider>
                 </div>
                 <div
                   className="platform-content-container"
@@ -84,16 +87,19 @@ const supPlatforms = ({ platformData, changeChecked }) => {
                 key={index}
               >
                 <div className="switch-container" style={styles.switch}>
-                  <Switch
-                    {...label}
-                    size="small"
-                    onClick={changeChecked.bind(
-                      null,
-                      item,
-                      item?.isChecked || false
-                    )}
-                    checked={item?.isChecked || false}
-                  />
+                  <ChakraProvider>
+                    <Switch
+                      size="sm"
+                      colorScheme="green"
+                      isChecked={item?.isChecked || true}
+                      onFocus={changeChecked.bind(
+                        null,
+                        item,
+                        item?.isChecked || false
+                      )}
+                      defaultIsChecked
+                    />
+                  </ChakraProvider>
                 </div>
                 <div
                   className="platform-content-container"
@@ -145,16 +151,19 @@ const supPlatforms = ({ platformData, changeChecked }) => {
                 key={index}
               >
                 <div className="switch-container" style={styles.switch}>
-                  <Switch
-                    {...label}
-                    size="small"
-                    checked={item?.isChecked || false}
-                    onClick={changeChecked.bind(
-                      null,
-                      item,
-                      item?.isChecked || false
-                    )}
-                  />
+                  <ChakraProvider>
+                    <Switch
+                      size="sm"
+                      colorScheme="green"
+                      isChecked={item?.isChecked || true}
+                      onFocus={changeChecked.bind(
+                        null,
+                        item,
+                        item?.isChecked || false
+                      )}
+                      defaultIsChecked
+                    />
+                  </ChakraProvider>
                 </div>
                 <div
                   className="platform-content-container"
