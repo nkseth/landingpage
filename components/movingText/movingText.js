@@ -32,7 +32,11 @@ const movingTest = () => {
                 <motion.hr
                   animate="hidden"
                   variants={list}
-                  transition={{ duration: 7 }}
+                  transition={{ duration: 6 }}
+                  style={{
+                    backgroundColor: "grey",
+                    width: "100rem",
+                  }}
                 />
               )}
             </div>

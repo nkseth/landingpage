@@ -3,7 +3,7 @@ export const styles = {
     backgroundColor: "#374051",
     color: "#FFFFFF",
     paddingTop: "20px",
-    minHeight: "40vh",
+    minHeight: "35vh",
     display: "flex",
     justifyContent: "space-between",
     flexDirection: "column",
@@ -15,7 +15,7 @@ export const styles = {
     flex: "wrap",
     padding: "0 80px",
   },
-  option: { marginRight: "100px" },
+  option: { marginRight: "100px", lineHeight: 2 },
   bottom: {
     display: "flex",
     alignItems: "center",
@@ -23,7 +23,7 @@ export const styles = {
     flex: "wrap",
     color: "#FFFFFF",
     borderTop: "1px solid white",
-    padding: "0 80px",
+    padding: "5px 80px",
   },
   icon: {
     color: "#FFFFFF",

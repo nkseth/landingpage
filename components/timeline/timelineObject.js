@@ -37,67 +37,83 @@ const timelineObject = () => {
   return (
     <div
       style={{
-        display: "flex",
-        flexDirection: "column",
-        alignItems: "start",
-        justifyContent: "center",
+        position: "relative",
       }}
     >
-      {objectData.map((item, index) => {
-        return (
-          <div
-            className="timeline-object"
-            style={{
-              display: "flex",
-              justifyContent: "center",
-              alignItems: "center",
-              margin: "1rem 0",
-            }}
-            key={index}
-          >
+      <div
+        style={{
+          width: "10px",
+          height: "100%",
+          backgroundColor: "black",
+          position: "absolute",
+          zIndex: -1,
+        }}
+      ></div>
+      <div
+        style={{
+          display: "flex",
+          flexDirection: "column",
+          alignItems: "start",
+          justifyContent: "center",
+          zIndex: 200,
+        }}
+      >
+        {objectData.map((item, index) => {
+          return (
             <div
-              className="timeline-circle"
+              className="timeline-object"
               style={{
-                width: "2rem",
-                height: "2rem",
-                backgroundColor: `${item.color}`,
-                boxShadow: `${item.shadow}`,
-                borderRadius: "50%",
-                marginRight: "1rem",
-              }}
-            ></div>
-            <div
-              className="timeline-content"
-              style={{
-                backgroundColor: `${item.color}`,
-                color: "white",
-                padding: "1rem",
-                borderRadius: "40px",
-                marginLeft: "1rem",
                 display: "flex",
                 justifyContent: "center",
                 alignItems: "center",
+                margin: "1rem 0",
               }}
+              key={index}
             >
               <div
+                className="timeline-circle"
                 style={{
-                  height: "1.5rem",
-                  width: "1.5rem",
+                  width: "2rem",
+                  height: "2rem",
+                  backgroundColor: `${item.color}`,
+                  boxShadow: `${item.shadow}`,
                   borderRadius: "50%",
-                  backgroundColor: "#ffffff",
+                  marginRight: "1rem",
+                }}
+              ></div>
+              <div
+                className="timeline-content"
+                style={{
+                  backgroundColor: `${item.color}`,
+                  color: "white",
+                  padding: "1rem",
+                  borderRadius: "40px",
+                  marginLeft: "1rem",
                   display: "flex",
                   justifyContent: "center",
                   alignItems: "center",
-                  marginRight: "1rem",
                 }}
               >
-                <item.icon style={{ color: `${item.color}` }} />
+                <div
+                  style={{
+                    height: "1.5rem",
+                    width: "1.5rem",
+                    borderRadius: "50%",
+                    backgroundColor: "#ffffff",
+                    display: "flex",
+                    justifyContent: "center",
+                    alignItems: "center",
+                    marginRight: "1rem",
+                  }}
+                >
+                  <item.icon style={{ color: `${item.color}` }} />
+                </div>
+                {item.desc}
               </div>
-              {item.desc}
             </div>
-          </div>
-        );
-      })}
+          );
+        })}
+      </div>
     </div>
   );
 };

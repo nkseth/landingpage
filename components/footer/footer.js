@@ -39,7 +39,9 @@ const footer = () => {
         {listData.map((item, index) => {
           return (
             <div key={index} className="optin-block" style={styles.option}>
-              <h3>{item?.heading}</h3>
+              <h3 style={{ fontWeight: "700", fontSize: "1.2rem" }}>
+                {item?.heading}
+              </h3>
               {item.options.map((option, index) => {
                 return (
                   <p href="" key={index}>
