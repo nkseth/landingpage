@@ -8,5 +8,5 @@ export const styles = {
     height: "90vh",
   },
   phone: { position: "absolute" },
-  Timeline: { position: "absolute", right: "5rem" },
+  Timeline: { position: "absolute", right: "2rem" },
 };

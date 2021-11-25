@@ -4,7 +4,7 @@ import Timeline from "../timeline/timeline";
 import { FiChevronRight, fiChevronLeft, FiChevronLeft } from "react-icons/fi";
 import { styles } from "./movingTextStyle";
 
-const movingTest = () => {
+const movingText = () => {
   const textData = [
     "Content Moderation",
     "Content Moderation",
@@ -34,8 +34,9 @@ const movingTest = () => {
                   variants={list}
                   transition={{ duration: 6 }}
                   style={{
-                    backgroundColor: "grey",
                     width: "100rem",
+                    backgroundColor: "grey",
+                    border: "1px solid grey",
                   }}
                 />
               )}
@@ -54,4 +55,4 @@ const movingTest = () => {
   );
 };
 
-export default movingTest;
+export default movingText;
